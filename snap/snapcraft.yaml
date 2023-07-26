@@ -1,11 +1,11 @@
-name: gtk-common-themes
+name: gtk-maxes-themes
 adopt-info: version-script
 architectures:
   - build-on: amd64
     run-on: all
-summary: All the (common) themes
+summary: Max's custom GTK themes and icons
 description: |
-  A snap that exports the GTK and icon themes used on various Linux distros.
+  A snap that exports Max's custom GTK themes and icons.
 
 # We build against Ubuntu 20.04 packages, but use the "bare" base as
 # we don't want to force installation of a large base snap.
@@ -21,125 +21,26 @@ slots:
     interface: content
     source:
       read:
-        - $SNAP/share/gtk2/Adwaita
-        - $SNAP/share/gtk2/Adwaita-dark
-        - $SNAP/share/gtk2/HighContrast
-        - $SNAP/share/gtk2/Ambiance
-        - $SNAP/share/gtk2/Radiance
-        - $SNAP/share/gtk2/Arc
-        - $SNAP/share/gtk2/Arc-Dark
-        - $SNAP/share/gtk2/Arc-Darker
-        - $SNAP/share/gtk2/Breeze
-        - $SNAP/share/gtk2/Breeze-Dark
-        - $SNAP/share/gtk2/Yaru
-        - $SNAP/share/gtk2/Yaru-bark
-        - $SNAP/share/gtk2/Yaru-blue
-        - $SNAP/share/gtk2/Yaru-magenta
-        - $SNAP/share/gtk2/Yaru-olive
-        - $SNAP/share/gtk2/Yaru-prussiangreen
-        - $SNAP/share/gtk2/Yaru-purple
-        - $SNAP/share/gtk2/Yaru-red
-        - $SNAP/share/gtk2/Yaru-sage
-        - $SNAP/share/gtk2/Yaru-viridian
-        - $SNAP/share/gtk2/Yaru-dark
-        - $SNAP/share/gtk2/Yaru-bark-dark
-        - $SNAP/share/gtk2/Yaru-blue-dark
-        - $SNAP/share/gtk2/Yaru-magenta-dark
-        - $SNAP/share/gtk2/Yaru-olive-dark
-        - $SNAP/share/gtk2/Yaru-prussiangreen-dark
-        - $SNAP/share/gtk2/Yaru-purple-dark
-        - $SNAP/share/gtk2/Yaru-red-dark
-        - $SNAP/share/gtk2/Yaru-sage-dark
-        - $SNAP/share/gtk2/Yaru-viridian-dark
-        - $SNAP/share/gtk2/elementary
-        - $SNAP/share/gtk2/Ambiant-MATE
-        - $SNAP/share/gtk2/Ambiant-MATE-Dark
-        - $SNAP/share/gtk2/Radiant-MATE
-        - $SNAP/share/gtk2/Yaru-MATE-light
-        - $SNAP/share/gtk2/Yaru-MATE-dark
-        - $SNAP/share/gtk2/Yaru-mate
-        - $SNAP/share/gtk2/Yaru-mate-dark
-        - $SNAP/share/gtk2/Matcha-aliz
-        - $SNAP/share/gtk2/Matcha-azul
-        - $SNAP/share/gtk2/Matcha-dark-aliz
-        - $SNAP/share/gtk2/Matcha-dark-azul
-        - $SNAP/share/gtk2/Matcha-dark-sea
-        - $SNAP/share/gtk2/Matcha-sea
-        - $SNAP/share/gtk2/Greybird
-        - $SNAP/share/gtk2/Greybird-dark
-        - $SNAP/share/gtk2/Materia-compact
-        - $SNAP/share/gtk2/Materia-dark-compact
+        - $SNAP/share/themes/Fluent-round-teal
+        - $SNAP/share/themes/Fluent-round-teal-compact
+        - $SNAP/share/themes/Fluent-round-teal-Dark 
+        - $SNAP/share/themes/Fluent-round-teal-Dark-compact 
+        - $SNAP/share/themes/Fluent-round-teal-Light
+        - $SNAP/share/themes/Fluent-round-teal-Light-compact
   gtk-3-themes:
     interface: content
     source:
       read:
-        - $SNAP/share/themes/Adwaita
-        - $SNAP/share/themes/Adwaita-dark
-        - $SNAP/share/themes/HighContrast
-        - $SNAP/share/themes/Ambiance
-        - $SNAP/share/themes/Radiance
-        - $SNAP/share/themes/Arc
-        - $SNAP/share/themes/Arc-Dark
-        - $SNAP/share/themes/Arc-Darker
-        - $SNAP/share/themes/Breeze
-        - $SNAP/share/themes/Breeze-Dark
-        - $SNAP/share/themes/Yaru-light
-        - $SNAP/share/themes/Yaru
-        - $SNAP/share/themes/Yaru-bark
-        - $SNAP/share/themes/Yaru-blue
-        - $SNAP/share/themes/Yaru-magenta
-        - $SNAP/share/themes/Yaru-olive
-        - $SNAP/share/themes/Yaru-prussiangreen
-        - $SNAP/share/themes/Yaru-purple
-        - $SNAP/share/themes/Yaru-red
-        - $SNAP/share/themes/Yaru-sage
-        - $SNAP/share/themes/Yaru-viridian
-        - $SNAP/share/themes/Yaru-dark
-        - $SNAP/share/themes/Yaru-bark-dark
-        - $SNAP/share/themes/Yaru-blue-dark
-        - $SNAP/share/themes/Yaru-magenta-dark
-        - $SNAP/share/themes/Yaru-olive-dark
-        - $SNAP/share/themes/Yaru-prussiangreen-dark
-        - $SNAP/share/themes/Yaru-purple-dark
-        - $SNAP/share/themes/Yaru-red-dark
-        - $SNAP/share/themes/Yaru-sage-dark
-        - $SNAP/share/themes/Yaru-viridian-dark
-        - $SNAP/share/themes/elementary
-        - $SNAP/share/themes/Ambiant-MATE
-        - $SNAP/share/themes/Ambiant-MATE-Dark
-        - $SNAP/share/themes/Radiant-MATE
-        - $SNAP/share/themes/Yaru-MATE-light
-        - $SNAP/share/themes/Yaru-MATE-dark
-        - $SNAP/share/themes/Yaru-mate
-        - $SNAP/share/themes/Yaru-mate-dark
-        - $SNAP/share/themes/Matcha-aliz
-        - $SNAP/share/themes/Matcha-azul
-        - $SNAP/share/themes/Matcha-dark-aliz
-        - $SNAP/share/themes/Matcha-dark-azul
-        - $SNAP/share/themes/Matcha-dark-sea
-        - $SNAP/share/themes/Matcha-sea
-        - $SNAP/share/themes/Greybird
-        - $SNAP/share/themes/Greybird-dark
-        - $SNAP/share/themes/Materia
-        - $SNAP/share/themes/Materia-compact
-        - $SNAP/share/themes/Materia-dark
-        - $SNAP/share/themes/Materia-dark-compact
-        - $SNAP/share/themes/Materia-light
-        - $SNAP/share/themes/Materia-light-compact
+        - $SNAP/share/themes/Fluent-round-teal
+        - $SNAP/share/themes/Fluent-round-teal-compact
+        - $SNAP/share/themes/Fluent-round-teal-Dark 
+        - $SNAP/share/themes/Fluent-round-teal-Dark-compact 
+        - $SNAP/share/themes/Fluent-round-teal-Light
+        - $SNAP/share/themes/Fluent-round-teal-Light-compact
   icon-themes:
     interface: content
     source:
       read:
-        - $SNAP/share/icons/default
-        - $SNAP/share/icons/Adwaita
-        - $SNAP/share/icons/hicolor
-        - $SNAP/share/icons/HighContrast
-        - $SNAP/share/icons/Humanity
-        - $SNAP/share/icons/Humanity-Dark
-        - $SNAP/share/icons/ubuntu-mono-dark
-        - $SNAP/share/icons/ubuntu-mono-light
-        - $SNAP/share/icons/DMZ-Black
-        - $SNAP/share/icons/DMZ-White
         - $SNAP/share/icons/Yaru
         - $SNAP/share/icons/Yaru-bark
         - $SNAP/share/icons/Yaru-blue
@@ -160,33 +61,11 @@ slots:
         - $SNAP/share/icons/Yaru-red-dark
         - $SNAP/share/icons/Yaru-sage-dark
         - $SNAP/share/icons/Yaru-viridian-dark
-        - $SNAP/share/icons/elementary
-        - $SNAP/share/icons/Ambiant-MATE
-        - $SNAP/share/icons/Radiant-MATE
-        - $SNAP/share/icons/Yaru-MATE-light
-        - $SNAP/share/icons/Yaru-MATE-dark
-        - $SNAP/share/icons/Yaru-mate
-        - $SNAP/share/icons/Yaru-mate-dark
-        - $SNAP/share/icons/Papirus-Adapta-Maia
-        - $SNAP/share/icons/Papirus-Adapta-Nokto-Maia
-        - $SNAP/share/icons/Papirus-Dark-Maia
-        - $SNAP/share/icons/Papirus-Light-Maia
-        - $SNAP/share/icons/Papirus-Maia
-        - $SNAP/share/icons/breeze_cursors
-        - $SNAP/share/icons/Breeze_Snow
-        - $SNAP/share/icons/elementary-xfce
-        - $SNAP/share/icons/elementary-xfce-dark
-        - $SNAP/share/icons/elementary-xfce-darker
-        - $SNAP/share/icons/elementary-xfce-darkest
-        - $SNAP/share/icons/handhelds
-        - $SNAP/share/icons/redglass
-        - $SNAP/share/icons/whiteglass
   sound-themes:
     interface: content
     source:
       read:
         - $SNAP/share/sounds/Yaru
-        - $SNAP/share/sounds/freedesktop
 
 parts:
   version-script:
@@ -196,186 +75,6 @@ parts:
       - git
     override-build: |
       snapcraftctl set-version $(git -C $SNAPCRAFT_PROJECT_DIR describe --tags 2>/dev/null || echo 0.1)
-
-  # The base icon theme
-  hicolor-icon-theme:
-    after: [utils]
-    plugin: autotools
-    autotools-configure-parameters:
-      - --prefix=/
-    source: git://anongit.freedesktop.org/xdg/default-icon-theme
-    source-type: git
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    build-packages:
-      - gnome-common
-
-  # GNOME's default icon theme, also used by Fedora
-  adwaita-icon-theme:
-    after: [utils]
-    plugin: autotools
-    autotools-configure-parameters:
-      - --prefix=/
-    source: https://gitlab.gnome.org/GNOME/adwaita-icon-theme.git
-    source-type: git
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    stage:
-      - -share/pkgconfig
-
-  # GNOME's default GTK theme, and Accessibility GTK/icon themes
-  gnome-themes-extra:
-    after: [utils]
-    plugin: autotools
-    autotools-configure-parameters:
-      - --prefix=/
-    source: https://gitlab.gnome.org/GNOME/gnome-themes-extra.git
-    source-type: git
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/icons
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-
-    build-packages:
-      - libgtk2.0-dev
-      - libgtk-3-dev
-      - librsvg2-dev
-      - libgdk-pixbuf2.0-dev
-      - libglib2.0-dev
-      - gnome-common
-
-  # Ubuntu's default GTK and icon themes
-  ubuntu-themes:
-    after: [utils]
-    plugin: nil
-    stage-packages:
-      - light-themes
-      - humanity-icon-theme
-      - ubuntu-mono
-      - dmz-cursor-theme
-      - sound-theme-freedesktop
-    override-build: |
-      snapcraftctl build
-      mv $SNAPCRAFT_PART_INSTALL/usr/share $SNAPCRAFT_PART_INSTALL/share
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/icons/Humanity
-      - share/icons/Humanity-Dark
-      - share/icons/ubuntu-mono-dark
-      - share/icons/ubuntu-mono-light
-      - share/icons/DMZ-Black
-      - share/icons/DMZ-White
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-      - share/sounds/freedesktop
-
-  # Elementary gtk theme
-  elementary-gtk-theme:
-    after: [utils]
-    plugin: meson
-    source: https://github.com/elementary/stylesheet.git
-    source-type: git
-    source-tag: 5.4.2
-    meson-parameters: [--prefix=/]
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-    build-packages:
-      - libgtk-3-dev
-      - libglib2.0-dev
-      - gnome-common
-
-  # Elementary icon theme
-  elementary-icon-theme:
-    after: [utils]
-    plugin: meson
-    source: https://github.com/elementary/icons.git
-    source-type: git
-    # Set scale_factors to 1, it does some funky linking
-    meson-parameters: [--prefix=/, -Dscale_factors=1, -Dvolume_icons=false]
-    override-build: |
-      # Don't include cursors, it does some funky linking
-      sed -i.bak -e "s|subdir('cursors')||g" $SNAPCRAFT_PART_SRC/meson.build
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    stage:
-      - share/icons/elementary
-
-  # Arc: common third party theme
-  arc-theme:
-    after: [utils]
-    plugin: meson
-    source: https://github.com/jnsh/arc-theme.git
-    source-type: git
-    meson-parameters:
-      - --prefix=/
-      - -Dthemes=gtk2,gtk3
-    build-packages:
-      - libgtk-3-dev
-      - libglib2.0-dev
-      - inkscape
-      - optipng
-    override-build: |
-      rm -f autogen.sh
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-
-  # Breeze: KDE's default theme
-  breeze-gtk:
-    after: [utils]
-    source: https://anongit.kde.org/breeze-gtk.git
-    source-type: git
-    plugin: cmake
-    cmake-parameters:
-      - -DCMAKE_INSTALL_PREFIX=
-      - -DCMAKE_CXX_STANDARD=11
-    build-packages:
-      - extra-cmake-modules
-      - gtk2-engines-pixbuf
-      - kde-style-breeze
-      - python3
-      - python3-cairo
-      - qtbase5-dev
-    override-build: |
-      export QT_SELECT=qt5
-      # Add a stub cmake config pointing at the color scheme files
-      echo 'set(Breeze_FOUND TRUE)' > ${SNAPCRAFT_PART_SRC}/cmake/FindBreeze.cmake
-      echo 'set(BREEZE_COLOR_INSTALL_ROOT "/usr/share/color-schemes")' >> ${SNAPCRAFT_PART_SRC}/cmake/FindBreeze.cmake
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-      # Make assets available to both GTK 3 and GTK 2 themes after split
-      cp -a $SNAPCRAFT_PART_INSTALL/share/themes/Breeze/assets $SNAPCRAFT_PART_INSTALL/share/gtk2/Breeze/
-      cp -a $SNAPCRAFT_PART_INSTALL/share/themes/Breeze-Dark/assets $SNAPCRAFT_PART_INSTALL/share/gtk2/Breeze-Dark/
-    stage:
-      - share/gtk2
-      - share/themes
-
-  # KDE's Breeze cursor themes
-  breeze-icon:
-    after: [utils]
-    source: https://github.com/KDE/breeze.git
-    source-type: git
-    plugin: dump
-    organize:
-      'cursors/Breeze/Breeze/cursors' : 'share/icons/breeze_cursors/cursors'
-      'cursors/Breeze/Breeze/index.theme' : 'share/icons/breeze_cursors/index.theme'
-      'cursors/Breeze_Snow/Breeze_Snow/cursors' : 'share/icons/Breeze_Snow/cursors'
-      'cursors/Breeze_Snow/Breeze_Snow/index.theme' : 'share/icons/Breeze_Snow/index.theme'
-    stage:
-      - share/icons
 
   # Yaru, the new official Ubuntu theme in 18.10 (formerly known by its code name Communitheme)
   yaru:
@@ -479,141 +178,19 @@ parts:
       - share/gtk2
       - share/themes
 
-  # Old Ubuntu MATE theme; shipped in <= 21.10
-  ubuntu-mate-gtk-theme:
-    after: [utils]
-    plugin: dump
-    source: http://de.archive.ubuntu.com/ubuntu/pool/universe/u/ubuntu-mate-artwork/ubuntu-mate-themes_20.04.2_all.deb
-    override-build: |
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
-      mv $SNAPCRAFT_PART_INSTALL/usr/share/themes/* $SNAPCRAFT_PART_INSTALL/share/themes/
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-
-  # Old Ubuntu MATE theme; shipped in <= 21.10
-  ubuntu-mate-icon-theme:
-    after: [utils]
-    plugin: dump
-    source: http://de.archive.ubuntu.com/ubuntu/pool/universe/u/ubuntu-mate-artwork/ubuntu-mate-icon-themes_20.04.2_all.deb
-    override-build: |
-      snapcraftctl build
-      # Don't include panel icons to reduce size as they aren't
-      # generally useful in the snap.
-      find $SNAPCRAFT_PART_INSTALL/usr/share/icons -name panel | xargs rm -rf
-
-      mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
-      mv $SNAPCRAFT_PART_INSTALL/usr/share/icons/* $SNAPCRAFT_PART_INSTALL/share/icons/
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    stage:
-      - share/icons/Ambiant-MATE
-      - share/icons/Radiant-MATE
-
-  # Matcha gtk theme - Manjaro default
-  matcha-gtk-theme:
+  # Fluent-round-teal - additional theme
+  fluent-round-teal:
     after: [utils]
     plugin: nil
-    source: https://github.com/vinceliuice/matcha/archive/2019_05_09.tar.gz
-    override-build: |
-      snapcraftctl build
-      mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
-      ./Install -d $SNAPCRAFT_PART_INSTALL/share/themes
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-
-  # Papirus Maia icons - Majaro default
-  pairus-maia-icon-theme:
-    after: [utils]
-    plugin: cmake
-    source: https://github.com/Ste74/papirus-maia-icon-theme.git
-    override-build: |
-      snapcraftctl build
-      # Don't include app and panel icons to reduce size as they aren't
-      # generally useful in the snap.
-      find $SNAPCRAFT_PART_INSTALL/usr/share/icons -name panel | xargs rm -rf
-
-      mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
-      mv $SNAPCRAFT_PART_INSTALL/usr/share/icons/* $SNAPCRAFT_PART_INSTALL/share/icons/
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    stage:
-      - share/icons/Papirus-*
-
-  # Greybird gtk themes - Xubuntu default
-  greybird-gtk-theme:
-    after: [utils]
-    plugin: meson
-    source: https://github.com/shimmerproject/Greybird.git
-    source-type: git
-    meson-parameters: [--prefix=/]
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
-    stage:
-      - share/gtk2/*/gtk-2.0
-      - share/themes/*/gtk-3*
-    build-packages:
-      - libgtk-3-dev
-      - libglib2.0-dev
-      - gnome-common
-
-  # Elementary-xfce icon theme - Xubuntu default
-  elementary-xfce-icon-theme:
-    after: [utils]
-    plugin: autotools
-    autotools-configure-parameters:
-      - --prefix=/
-    source: https://github.com/shimmerproject/elementary-xfce.git
-    source-type: git
-    source-tag: v0.15.2
-    override-build: |
-      snapcraftctl build
-      $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
-    stage:
-      - share/icons/elementary-xfce
-      - share/icons/elementary-xfce-dark
-      - share/icons/elementary-xfce-darker
-      - share/icons/elementary-xfce-darkest
-    build-packages:
-      - libgtk-3-dev
-      - optipng
-
-  # Materia icons - Ubuntu Studio default
-  materia-gtk-theme:
-    after: [utils]
-    plugin: nil
-    source: https://github.com/nana-4/materia-theme.git
-    source-tag: v20200320 # Latest master fails to build
+    source: https://github.com/vinceliuice/Fluent-gtk-theme.git
+    source-tag: "2023-06-20"
     override-build: |
         mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
-        ./install.sh --dest $SNAPCRAFT_PART_INSTALL/share/themes
+        ./install.sh -t teal -i ubuntu --tweaks solid float round square --dest $SNAPCRAFT_PART_INSTALL/share/themes
+        $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
     stage:
       - share/gtk2/*/gtk-2.0
       - share/themes/*/gtk-3*
-
-  xcursor-themes:
-    plugin: nil
-    stage-packages:
-      - xcursor-themes
-    override-build: |
-      mv $SNAPCRAFT_PART_INSTALL/usr/share $SNAPCRAFT_PART_INSTALL/share
-    stage:
-      - share/icons/handhelds
-      - share/icons/redglass
-      - share/icons/whiteglass
-
-  # Define a default, fallback cursor theme in case the requested theme
-  # isn't included in gtk-common-themes (LP: #1900334).
-  default-cursor-theme:
-    after: [ubuntu-themes]
-    plugin: nil
-    override-prime: |
-      mkdir -p $SNAPCRAFT_PRIME/share/icons/default
-      cd $SNAPCRAFT_PRIME/share/icons/default
-      ln -s ../DMZ-White/cursor.theme index.theme
 
   utils:
     plugin: dump
