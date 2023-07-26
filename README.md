@@ -1,3 +1,3 @@
-# gtk-common-themes
+# gtk-maxes-themes
 
-A snap that exports common GTK and icon themes used on various Linux distros.
+A snap that exports my custom GTK and icon themes.
