@@ -1,3 +1,3 @@
 # gtk-maxes-themes
 
-A snap that exports Max's custom GTK themes and icons.
+A snap that exports custom GTK themes and icons.
