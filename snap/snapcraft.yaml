@@ -21,22 +21,14 @@ slots:
     interface: content
     source:
       read:
-        - $SNAP/share/themes/Fluent-round-teal
-        - $SNAP/share/themes/Fluent-round-teal-compact
         - $SNAP/share/themes/Fluent-round-teal-Dark 
-        - $SNAP/share/themes/Fluent-round-teal-Dark-compact 
-        - $SNAP/share/themes/Fluent-round-teal-Light
-        - $SNAP/share/themes/Fluent-round-teal-Light-compact
+        - $SNAP/share/themes/WhiteSur-Dark
   gtk-3-themes:
     interface: content
     source:
       read:
-        - $SNAP/share/themes/Fluent-round-teal
-        - $SNAP/share/themes/Fluent-round-teal-compact
-        - $SNAP/share/themes/Fluent-round-teal-Dark 
-        - $SNAP/share/themes/Fluent-round-teal-Dark-compact 
-        - $SNAP/share/themes/Fluent-round-teal-Light
-        - $SNAP/share/themes/Fluent-round-teal-Light-compact
+        - $SNAP/share/themes/Fluent-round-teal-Dark
+        - $SNAP/share/themes/WhiteSur-Dark
   icon-themes:
     interface: content
     source:
@@ -178,15 +170,29 @@ parts:
       - share/gtk2
       - share/themes
 
-  # Fluent-round-teal - additional theme
-  fluent-round-teal:
+  # Fluent - additional theme
+  fluent:
     after: [utils]
     plugin: nil
     source: https://github.com/vinceliuice/Fluent-gtk-theme.git
     source-tag: "2023-06-20"
     override-build: |
         mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
-        ./install.sh -t teal -i ubuntu --tweaks solid float round square --dest $SNAPCRAFT_PART_INSTALL/share/themes
+        ./install.sh -t teal -i ubuntu --tweaks round --dest $SNAPCRAFT_PART_INSTALL/share/themes
+        $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
+    stage:
+      - share/gtk2/*/gtk-2.0
+      - share/themes/*/gtk-3*
+
+  # WhiteSur - additional theme
+  whitesur:
+    after: [utils]
+    plugin: nil
+    source: https://github.com/vinceliuice/WhiteSur-gtk-theme.git
+    source-tag: "2024-11-18"
+    override-build: |
+        mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
+        ./install.sh -N glassy --dest $SNAPCRAFT_PART_INSTALL/share/themes
         $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
     stage:
       - share/gtk2/*/gtk-2.0
